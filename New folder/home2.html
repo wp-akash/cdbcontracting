@@ -1,0 +1,1654 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CDB Contracting LLC provides building construction, fit-out and civil works in Dubai."
+    />
+    <meta name="theme-color" content="#0b416e" />
+    <title>CDB Contracting LLC | Dubai Building Contractor</title>
+    <link rel="preload" href="home.jpg" as="image" />
+    <link
+      rel="preload"
+      href="TIMESS__.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <script src="script.js" defer></script>
+    <style>
+      @font-face {
+        font-family: TIMESS;
+        src: url("TIMESS__.ttf") format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: Creato;
+        src: url("CreatoDisplay-Regular.otf") format("opentype");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: Creato;
+        src: url("CreatoDisplay-Medium.otf") format("opentype");
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      :root {
+        --navy: #133851;
+        --radius: 14px;
+        --blue: #215d89;
+        --ink: #142332;
+        --muted: #4e616d;
+        --cloud: #f2f5f6;
+        --line: #d7e0e8;
+        --accent: #fabe2e;
+        --header-height: 96px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--header-height) + 12px);
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: white;
+        font:
+          400 1rem/1.6 Creato,
+          system-ui,
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      p,
+      dl,
+      dd,
+      figure {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        font:
+          400 1rem/1.12 TIMESS,
+          Arial,
+          sans-serif;
+        letter-spacing: -0.025em;
+      }
+      h1 {
+        font-size: clamp(2.6rem, 5.7vw, 6.1rem);
+      }
+      h2 {
+        font-size: clamp(1.9rem, 3.1vw, 3.6rem);
+      }
+      h3 {
+        font-size: clamp(1.15rem, 1.6vw, 1.65rem);
+      }
+      a {
+        color: inherit;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+      address {
+        font-style: normal;
+      }
+      :focus-visible {
+        outline: 3px solid #875a04;
+        outline-offset: 4px;
+      }
+      .blue :focus-visible,
+      .hero :focus-visible {
+        outline-color: var(--accent);
+      }
+      .wrap {
+        width: 85%;
+        margin-inline: auto;
+      }
+      .section {
+        padding-block: clamp(52px, 7vw, 110px);
+      }
+      .split {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.94fr);
+        gap: clamp(24px, 6vw, 110px);
+        align-items: start;
+      }
+      .tag {
+        color: var(--blue);
+        margin-bottom: 9px;
+        font-size: 0.77rem;
+        font-weight: 500;
+        letter-spacing: 0.095em;
+        text-transform: uppercase;
+      }
+      .copy {
+        color: var(--muted);
+      }
+      h2 + .copy {
+        margin-top: 11px;
+      }
+      .cloud {
+        background: var(--cloud);
+      }
+      .blue {
+        background: var(--navy);
+        color: white;
+      }
+      .blue .tag,
+      .blue .copy {
+        color: #e1edf7;
+      }
+      .button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 47px;
+        gap: 10px;
+        padding: 7px 10px 7px 17px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--ink);
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .button:not(.menu)::after {
+        content: "↗" / "";
+        display: grid;
+        place-items: center;
+        flex: none;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--ink);
+        font:
+          600 15px/1 Arial,
+          sans-serif;
+      }
+      .button:hover {
+        background: #ffda7e;
+      }
+      .button.secondary {
+        background: transparent;
+        border-color: #ffffff9e;
+        color: white;
+      }
+      .button.secondary:hover {
+        background: white;
+        color: var(--ink);
+      }
+      .skip {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        z-index: 9;
+        padding: 8px 14px;
+        background: white;
+        transform: translateY(-150%);
+      }
+      .skip:focus {
+        transform: none;
+      }
+      .site-header {
+        position: absolute;
+        z-index: 5;
+        inset: 0 0 auto;
+        background: #fffffff5;
+        border-bottom: 1px solid var(--line);
+      }
+      .js .site-header {
+        position: fixed;
+      }
+      .site-header.is-scrolled {
+        box-shadow: 0 4px 16px #0b263918;
+      }
+      .utility {
+        background: #121619;
+        color: white;
+        text-align: center;
+        font-size: 0.79rem;
+        padding: 3px 10px;
+      }
+      .utility a {
+        text-decoration: none;
+      }
+      .utility a:hover {
+        color: var(--accent);
+      }
+      .nav {
+        position: relative;
+        min-height: 68px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 16px;
+      }
+      .brand {
+        display: block;
+        width: fit-content;
+      }
+      .brand img {
+        width: 89px;
+        height: auto;
+        filter: brightness(0);
+      }
+      .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(12px, 2vw, 32px);
+      }
+      .nav-menu a {
+        text-decoration: none;
+        font-size: 0.93rem;
+        font-weight: 500;
+      }
+      .nav-menu a:hover {
+        color: var(--blue);
+        text-decoration: underline 2px var(--accent);
+        text-underline-offset: 5px;
+      }
+      .nav-actions {
+        display: flex;
+        justify-self: end;
+        align-items: center;
+        gap: 7px;
+      }
+      .nav-actions .button {
+        min-height: 42px;
+      }
+      .menu {
+        display: none;
+        background: white;
+        border-color: var(--line);
+      }
+
+      .hero {
+        display: grid;
+        align-items: center;
+        min-height: 100vh;
+        padding-block: calc(var(--header-height) + clamp(24px, 5vw, 72px))
+          clamp(32px, 5vw, 75px);
+        color: white;
+        background: #102638;
+      }
+      .hero-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+        gap: clamp(25px, 5vw, 82px);
+        align-items: center;
+      }
+      .hero-content {
+        min-width: 0;
+      }
+      .hero h1 {
+        max-width: 14ch;
+        font-size: clamp(2.7rem, 5.6vw, 6.2rem);
+        text-wrap: balance;
+      }
+      .hero .tag {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--accent);
+      }
+      .hero .tag::before {
+        content: "";
+        width: 23px;
+        height: 2px;
+        background: currentColor;
+      }
+      .hero .copy {
+        max-width: 41ch;
+        color: #e1edf7;
+        font-size: clamp(1rem, 1.42vw, 1.2rem);
+        margin-top: 16px;
+      }
+      .hero-image {
+        padding: 0 12px 12px 0;
+        background: linear-gradient(var(--accent), var(--accent)) right bottom /
+          33% 43% no-repeat;
+      }
+      .hero-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.16;
+        object-fit: cover;
+        object-position: 60% center;
+        border-radius: var(--radius) var(--radius) 0 var(--radius);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 23px;
+      }
+      .enquiry-strip {
+        background: white;
+        border-bottom: 1px solid var(--line);
+      }
+      .enquiry-strip .wrap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .enquiry-strip a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        min-height: 65px;
+        padding-inline: clamp(10px, 2vw, 28px);
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .enquiry-strip a:first-child {
+        padding-left: 0;
+      }
+      .enquiry-strip a:last-child {
+        padding-right: 0;
+      }
+      .enquiry-strip a + a {
+        border-left: 1px solid var(--line);
+      }
+      .enquiry-strip a span {
+        color: var(--blue);
+      }
+      .enquiry-strip a:hover {
+        color: var(--blue);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .about-copy {
+        align-self: center;
+        border-left: 2px solid var(--accent);
+        padding-left: 21px;
+      }
+      .about-copy p + p {
+        margin-top: 10px;
+      }
+      .section-photo {
+        margin-top: clamp(17px, 2vw, 29px);
+      }
+      .section-photo img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 8;
+        object-fit: cover;
+        border-radius: var(--radius);
+      }
+      .section-photo figcaption {
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .about-visual {
+        margin-top: clamp(27px, 3.5vw, 55px);
+      }
+      .about-visual img {
+        aspect-ratio: 2.75;
+        object-position: center 65%;
+      }
+      .approach-intro {
+        align-items: center;
+      }
+      .approach-intro .section-photo {
+        margin-top: 0;
+      }
+      .safety-photo img {
+        object-position: center 42%;
+      }
+      .services {
+        padding-top: clamp(22px, 4vw, 67px);
+      }
+      .service-grid,
+      .project-grid {
+        display: grid;
+        margin-top: clamp(22px, 3vw, 43px);
+      }
+      .service-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(13px, 1.6vw, 23px);
+      }
+      .service-grid article,
+      .project-grid figure {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        transition:
+          box-shadow 0.2s,
+          border-color 0.2s;
+      }
+      .service-grid article:hover,
+      .project-grid figure:hover,
+      .service-grid article:focus-within,
+      .project-grid figure:focus-within {
+        border-color: #b2c2cd;
+        box-shadow: 0 12px 28px #10263813;
+      }
+      .service-photo {
+        width: 100%;
+        aspect-ratio: 1.55;
+        object-fit: cover;
+      }
+      .service-copy {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: clamp(16px, 2.1vw, 32px);
+      }
+      .service-copy a {
+        margin-top: auto;
+        padding-top: 12px;
+        color: var(--navy);
+        font-weight: 500;
+        text-underline-offset: 4px;
+      }
+      .service-grid p,
+      .project-grid .copy {
+        margin-top: 8px;
+      }
+      .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(12px, 1.6vw, 25px);
+      }
+      .project-media {
+        position: relative;
+      }
+      .project-grid img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.42;
+        object-fit: cover;
+      }
+      .project-badge {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--ink);
+        font-size: 0.72rem;
+        font-weight: 500;
+      }
+      .project-grid figcaption {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: clamp(16px, 2vw, 29px);
+      }
+      .project-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 13px 0 17px;
+        padding: 0;
+        list-style: none;
+      }
+      .project-chips li {
+        padding: 3px 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--cloud);
+        color: var(--navy);
+        font-size: 0.78rem;
+      }
+      .project-actions {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: auto;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+      }
+      .project-actions details {
+        flex: 1;
+        min-width: 0;
+        border: 0;
+      }
+      .project-actions summary {
+        justify-content: start;
+        gap: 8px;
+        min-height: 40px;
+        color: var(--navy);
+      }
+      .project-actions summary::after {
+        font-size: 0.95rem;
+      }
+      .project-actions details p {
+        margin-top: 4px;
+        padding-bottom: 0;
+        font-size: 0.9rem;
+      }
+      .project-enquiry {
+        display: inline-flex;
+        flex: none;
+        align-items: center;
+        gap: 5px;
+        min-height: 40px;
+        padding: 5px 11px;
+        border-radius: 999px;
+        background: var(--navy);
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .project-enquiry:hover {
+        background: var(--accent);
+        color: var(--ink);
+      }
+      .project-grid .tag {
+        margin-top: 0;
+        margin-bottom: 6px;
+      }
+      .rules > div {
+        padding-block: 13px;
+        border-top: 1px solid var(--line);
+      }
+      .rules dt {
+        font-weight: 500;
+      }
+      .rules dd {
+        margin-top: 4px;
+        color: var(--muted);
+      }
+      .blue .rules > div {
+        border-color: #ffffff40;
+      }
+      .blue .rules dd {
+        color: #e1edf7;
+      }
+      .methods {
+        background: linear-gradient(110deg, #0b416e, #12557e);
+      }
+      .steps {
+        list-style: none;
+        margin: 28px 0 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 15px;
+      }
+      .step-top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .step-top span {
+        display: grid;
+        place-items: center;
+        flex: none;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #abc9e3;
+        border-radius: 50%;
+        color: var(--navy);
+        background: #e4eff9;
+        font-size: 0.86rem;
+        font-weight: 500;
+      }
+      .steps li:not(:last-child) .step-top::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #b7c9da;
+      }
+      .steps .copy {
+        margin-top: 6px;
+        max-width: 28ch;
+      }
+      .safety {
+        padding-top: 0;
+      }
+      .safety .wrap {
+        border-top: 1px solid var(--line);
+        padding-top: clamp(28px, 4vw, 60px);
+      }
+      details {
+        border-top: 1px solid var(--line);
+      }
+      details:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        min-height: 48px;
+        list-style: none;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: "+" / "";
+        color: var(--blue);
+        font-size: 1.2rem;
+      }
+      details[open] summary::after {
+        content: "−" / "";
+      }
+      details p {
+        padding-bottom: 12px;
+        color: var(--muted);
+      }
+      .email {
+        display: inline-block;
+        margin-block: 13px 8px;
+        overflow-wrap: anywhere;
+        text-underline-offset: 4px;
+      }
+      form {
+        background: white;
+        color: var(--ink);
+        border-radius: var(--radius);
+        border-top: 3px solid var(--accent);
+        padding: clamp(17px, 2.4vw, 32px);
+      }
+      #contact form :focus-visible {
+        outline-color: #875a04;
+      }
+      #form-note {
+        margin: 7px 0 12px;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      label {
+        display: grid;
+        gap: 4px;
+        font-weight: 500;
+        font-size: 0.88rem;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #a9bac9;
+        border-radius: 5px;
+        background: #f6f8fa;
+        color: var(--ink);
+        font-weight: 400;
+      }
+      textarea {
+        resize: vertical;
+      }
+      .message-field {
+        grid-column: 1 / -1;
+      }
+      form .button {
+        margin-top: 13px;
+      }
+      .feedback {
+        background: #f5f7f9;
+      }
+      .feedback-heading {
+        align-items: end;
+      }
+      .feedback-heading h2 span {
+        color: var(--blue);
+      }
+      .feedback-heading > .copy {
+        max-width: 41ch;
+      }
+      .feedback-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(13px, 2vw, 28px);
+        margin-top: clamp(25px, 4vw, 55px);
+      }
+      .feedback-card {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: clamp(18px, 2.2vw, 34px);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: white;
+        box-shadow: 0 3px 8px #1026380a;
+      }
+      .feedback-quote {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 18px;
+        border-radius: 50%;
+        background: #fff3cf;
+        color: #77510a;
+        font:
+          2rem/1 Georgia,
+          serif;
+        padding-top: 8px;
+      }
+      .feedback-card > .copy {
+        margin: 9px 0 21px;
+      }
+      .feedback-card a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        width: 100%;
+        min-height: 44px;
+        margin-top: auto;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+        color: var(--navy);
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .feedback-card a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .feedback-card a span {
+        display: grid;
+        flex: none;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--cloud);
+      }
+      .feedback-card a:hover span,
+      .feedback-card a:focus-visible span {
+        background: var(--accent);
+      }
+      @media (max-width: 760px) {
+        .feedback-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .site-footer {
+        background:
+          linear-gradient(#0b416ef5, #0b416ef0),
+          url("Herothree.jpg") center 60% / cover no-repeat;
+      }
+      .footer-wrap {
+        width: min(85%, 1230px);
+        margin-inline: auto;
+      }
+      .footer-email {
+        display: flex;
+        align-items: start;
+        gap: 15px;
+        font-size: clamp(1.55rem, 5vw, 5.2rem);
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+        overflow-wrap: anywhere;
+        text-decoration: none;
+      }
+      .footer-email:hover,
+      .footer-links a:hover {
+        color: var(--accent);
+      }
+      .footer-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        align-items: center;
+        gap: clamp(15px, 4vw, 60px);
+        margin-top: clamp(20px, 4vw, 58px);
+      }
+      .footer-details h2 {
+        font-size: 1.06rem;
+        margin-bottom: 5px;
+      }
+      .footer-top {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid #ffffff80;
+        border-radius: 50%;
+        text-decoration: none;
+      }
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        margin-top: clamp(25px, 5vw, 75px);
+        font-size: 0.85rem;
+      }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .footer-links a {
+        text-decoration: none;
+      }
+
+      @media (max-width: 920px) {
+        .nav {
+          grid-template-columns: auto 1fr;
+          gap: 8px;
+        }
+        .nav-menu {
+          grid-column: 1 / -1;
+          grid-row: 2;
+          padding-bottom: 10px;
+        }
+        .js .nav-menu {
+          display: none;
+          position: absolute;
+          inset: 100% 0 auto;
+          max-height: calc(100dvh - var(--header-height));
+          overflow: auto;
+          border: 1px solid var(--line);
+          padding: 12px;
+          background: white;
+        }
+        .js .nav-menu.open {
+          display: grid;
+        }
+        .js .menu {
+          display: inline-flex;
+        }
+        .service-grid,
+        .steps {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 760px) {
+        .hero-layout {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: clamp(2.55rem, 8vw, 4.5rem);
+        }
+        .hero-image img {
+          aspect-ratio: 1.65;
+        }
+      }
+      @media (max-width: 620px) {
+        .split,
+        .project-grid,
+        .footer-details,
+        .enquiry-strip .wrap {
+          grid-template-columns: 1fr;
+        }
+        .enquiry-strip a {
+          min-height: 49px;
+          padding-inline: 0;
+        }
+        .enquiry-strip a + a {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+        .nav-actions .button {
+          padding-inline: 9px;
+          font-size: 0.84rem;
+        }
+        .brand img {
+          width: 70px;
+        }
+        .nav-actions .button:not(.menu)::after {
+          display: none;
+        }
+        .steps li:nth-child(even) .step-top::after {
+          content: none;
+        }
+      }
+      @media (max-width: 390px) {
+        .service-grid,
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .service-grid article,
+        .project-grid figure {
+          transition: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="utility">
+        <a href="mailto:tanvir@cdbcontracting.ae">tanvir@cdbcontracting.ae</a>
+      </div>
+      <div class="wrap nav">
+        <a class="brand" href="#top" aria-label="CDB Contracting LLC home"
+          ><img
+            src="brand.png"
+            alt="CDB Contracting LLC"
+            width="89"
+            height="47"
+        /></a>
+        <nav id="navlinks" class="nav-menu" aria-label="Main navigation">
+          <a href="#home">Home</a><a href="#about">About</a
+          ><a href="#services">Services</a><a href="#projects">Projects</a
+          ><a href="#approach">Approach</a><a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="button appointment" href="#contact">Book a consultation</a>
+          <button
+            id="menu"
+            class="button menu"
+            type="button"
+            aria-controls="navlinks"
+            aria-expanded="false"
+            hidden
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="wrap hero-layout">
+          <div class="hero-content">
+            <!-- <p class="tag">CDB Contracting LLC · Business Bay</p> -->
+            <h1>Building and fit-out in Dubai.</h1>
+            <p class="copy">
+              Villa construction, commercial fit-outs and civil works across
+              Dubai. Share your plans and we’ll discuss the scope, site
+              conditions and next steps.
+            </p>
+            <div class="actions">
+              <a class="button" href="#contact">Discuss your project</a
+              ><a class="button secondary" href="#services">Explore services</a>
+            </div>
+          </div>
+          <figure class="hero-image">
+            <img
+              src="home.jpg"
+              alt="Modern villa with glass balconies and a swimming pool"
+              width="1920"
+              height="1274"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </section>
+      <nav class="enquiry-strip" aria-label="Explore CDB Contracting">
+        <div class="wrap">
+          <a href="#services"
+            >Construction services <span aria-hidden="true">↘</span></a
+          >
+          <a href="#projects"
+            >Project examples <span aria-hidden="true">↘</span></a
+          >
+          <a href="#contact" data-subject="Quotation request"
+            >Request a quote <span aria-hidden="true">↘</span></a
+          >
+        </div>
+      </nav>
+
+      <section id="about" class="section">
+        <div class="wrap split">
+          <div>
+            <p class="tag">About us</p>
+            <h2>A clear scope from the start.</h2>
+          </div>
+          <div class="about-copy">
+            <p class="copy">
+              Based in Business Bay, CDB Contracting LLC has worked in Dubai’s
+              residential and commercial sectors for over five years. Our scope
+              covers new construction, refurbishment and external works.
+            </p>
+            <p class="copy">
+              We start by reviewing the drawings, site conditions and target
+              handover. That lets us define the work and identify which
+              decisions still affect pricing or sequencing.
+            </p>
+          </div>
+        </div>
+        <div class="wrap about-visual">
+          <figure class="section-photo">
+            <img
+              src="Herothree.jpg"
+              alt="High-rise buildings along the Dubai Marina waterfront"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="services" class="section services">
+        <div class="wrap">
+          <p class="tag">Our services</p>
+          <h2>Construction services.</h2>
+          <div class="service-grid">
+            <article>
+              <img
+                class="service-photo"
+                src="hero.jpg"
+                alt="Concrete building frame and tower crane"
+                loading="lazy"
+              />
+              <div class="service-copy">
+                <h3>Building construction</h3>
+                <p class="copy">
+                  Foundations, reinforced concrete frames, blockwork and
+                  finishes for villas and commercial buildings, as defined by
+                  the drawings.
+                </p>
+                <a
+                  href="#contact"
+                  data-subject="Building construction enquiry"
+                  aria-label="Enquire about Building construction"
+                  >Enquire <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article>
+              <img
+                class="service-photo"
+                src="image/Service-3.png"
+                alt="Finished commercial lobby with pendant lighting"
+                loading="lazy"
+              />
+              <div class="service-copy">
+                <h3>Renovation &amp; fit-out</h3>
+                <p class="copy">
+                  Interior refurbishment, partitions, flooring and finishes for
+                  offices and other occupied spaces, coordinated around access
+                  and work hours.
+                </p>
+                <a
+                  href="#contact"
+                  data-subject="Renovation &amp; fit-out enquiry"
+                  aria-label="Enquire about Renovation &amp; fit-out"
+                  >Enquire <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article>
+              <img
+                class="service-photo"
+                src="warehouse.jpg"
+                alt="Finished concrete floor inside a steel-frame warehouse"
+                loading="lazy"
+              />
+              <div class="service-copy">
+                <h3>Civil &amp; external works</h3>
+                <p class="copy">
+                  Site preparation, excavation, levelling and interlock paving.
+                  Confirm finished levels, drainage falls and the expected
+                  vehicle loads early.
+                </p>
+                <a
+                  href="#contact"
+                  data-subject="Civil &amp; external works enquiry"
+                  aria-label="Enquire about Civil &amp; external works"
+                  >Enquire <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article>
+              <img
+                class="service-photo"
+                src="image/Service-2.png"
+                alt="Completed building envelope with masonry and glazing"
+                loading="lazy"
+              />
+              <div class="service-copy">
+                <h3>Turnkey construction</h3>
+                <p class="copy">
+                  Bring the agreed structure, external works and finishes into
+                  one package, with responsibilities and handover documents
+                  defined up front.
+                </p>
+                <a
+                  href="#contact"
+                  data-subject="Turnkey construction enquiry"
+                  aria-label="Enquire about Turnkey construction"
+                  >Enquire <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="section cloud"
+        aria-labelledby="projects-title"
+      >
+        <div class="wrap">
+          <p class="tag">Projects</p>
+          <h2 id="projects-title">Project examples.</h2>
+          <p class="copy">
+            Illustrative examples of the residential, commercial and industrial
+            scopes we can discuss with you.
+          </p>
+          <div class="project-grid">
+            <figure>
+              <div class="project-media">
+                <img
+                  src="villa.jpg"
+                  alt="Contemporary villa exterior"
+                  loading="lazy"
+                />
+                <span class="project-badge">Illustrative scope</span>
+              </div>
+              <figcaption>
+                <p class="tag">Residential</p>
+                <h3>Contemporary villa</h3>
+                <p class="copy">
+                  New-build scope covering foundations, concrete structure and
+                  exterior finishes.
+                </p>
+                <ul class="project-chips" aria-label="Scope highlights">
+                  <li>Foundations</li>
+                  <li>Concrete structure</li>
+                  <li>Exterior finishes</li>
+                </ul>
+                <div class="project-actions">
+                  <details>
+                    <summary>View details</summary>
+                    <p>
+                      Share the plot location, structural drawings and preferred
+                      finishes so we can discuss site access, sequencing and the
+                      handover scope.
+                    </p>
+                  </details>
+                  <a
+                    class="project-enquiry"
+                    href="#contact"
+                    data-subject="Contemporary villa enquiry"
+                    aria-label="Enquire about contemporary villa"
+                    >Enquire <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="project-media">
+                <img
+                  src="fitout.jpg"
+                  alt="Office interior with glass partitions"
+                  loading="lazy"
+                />
+                <span class="project-badge">Illustrative scope</span>
+              </div>
+              <figcaption>
+                <p class="tag">Commercial</p>
+                <h3>Office fit-out</h3>
+                <p class="copy">
+                  Interior renovation with partitions, floor finishes and
+                  coordination of building services.
+                </p>
+                <ul class="project-chips" aria-label="Scope highlights">
+                  <li>Partitions</li>
+                  <li>Floor finishes</li>
+                  <li>Services coordination</li>
+                </ul>
+                <div class="project-actions">
+                  <details>
+                    <summary>View details</summary>
+                    <p>
+                      Tell us whether the office will stay occupied, what needs
+                      to remain in place and which work hours the building
+                      allows.
+                    </p>
+                  </details>
+                  <a
+                    class="project-enquiry"
+                    href="#contact"
+                    data-subject="Office fit-out enquiry"
+                    aria-label="Enquire about office fit-out"
+                    >Enquire <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="project-media">
+                <img
+                  src="warehouse.jpg"
+                  alt="Steel-framed warehouse interior"
+                  loading="lazy"
+                />
+                <span class="project-badge">Illustrative scope</span>
+              </div>
+              <figcaption>
+                <p class="tag">Industrial</p>
+                <h3>Warehouse floor works</h3>
+                <p class="copy">
+                  Concrete floors and associated site works planned around
+                  traffic and loading requirements.
+                </p>
+                <ul class="project-chips" aria-label="Scope highlights">
+                  <li>Concrete flooring</li>
+                  <li>Site preparation</li>
+                  <li>Vehicle loads</li>
+                </ul>
+                <div class="project-actions">
+                  <details>
+                    <summary>View details</summary>
+                    <p>
+                      Provide the intended vehicle loads, floor levels and any
+                      flatness tolerances so we can discuss the slab and site
+                      requirements.
+                    </p>
+                  </details>
+                  <a
+                    class="project-enquiry"
+                    href="#contact"
+                    data-subject="Warehouse floor works enquiry"
+                    aria-label="Enquire about warehouse floor works"
+                    >Enquire <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section">
+        <div class="wrap split">
+          <div>
+            <figure class="section-photo">
+              <img
+                src="image/Project-1.png"
+                alt="Glazed commercial building with a panelled exterior"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <dl class="rules">
+            <p class="tag">Why choose us</p>
+            <h2>Know what’s included before work starts.</h2>
+            <div>
+              <dt>A scope you can review</dt>
+              <dd>
+                Discuss what is included, what still needs a decision and what
+                information is needed for a quotation.
+              </dd>
+            </div>
+            <div>
+              <dt>Planning around the site</dt>
+              <dd>
+                Raise access, occupancy and work sequencing early, especially
+                when renovating an existing property.
+              </dd>
+            </div>
+            <div>
+              <dt>One brief for related trades</dt>
+              <dd>
+                Identify where structural, civil and fit-out work overlap so
+                responsibilities can be agreed up front.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="methods" class="section methods blue">
+        <div class="wrap split">
+          <div>
+            <p class="tag">Methods &amp; technology</p>
+            <h2>Methods that match the specification.</h2>
+            <p class="copy">
+              Agree the method, inspection points and acceptance criteria with
+              the project team before work starts.
+            </p>
+            <dl class="rules">
+              <div>
+                <dt>Reinforcement &amp; formwork</dt>
+                <dd>
+                  Discuss how reinforcement, shuttering and concrete placement
+                  fit the structural drawings and pour sequence.
+                </dd>
+              </div>
+              <div>
+                <dt>Industrial concrete floors</dt>
+                <dd>
+                  Where floor flatness matters, specify the tolerances and
+                  discuss whether laser-guided screeding suits the slab.
+                </dd>
+              </div>
+              <div>
+                <dt>Earthworks &amp; paving</dt>
+                <dd>
+                  Set finished levels, drainage falls and expected traffic
+                  before choosing the sub-base and paving system.
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="section-photo">
+            <img
+              src="hero.jpg"
+              alt="Reinforced concrete structure under construction"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="approach" class="section cloud">
+        <div class="wrap">
+          <div class="split approach-intro">
+            <div>
+              <p class="tag">Our approach</p>
+              <h2>From enquiry to handover.</h2>
+              <p class="copy">
+                Set out the brief, agree what needs pricing and identify the
+                inspections and documents required for closeout.
+              </p>
+            </div>
+            <!-- <figure class="section-photo">
+              <img
+                src="image/CTA-Image.png"
+                alt="Glazed façade detail on a contemporary building"
+                loading="lazy"
+              />
+            </figure> -->
+          </div>
+          <ol class="steps">
+            <li>
+              <div class="step-top"><span aria-hidden="true">01</span></div>
+              <h3>Share your brief</h3>
+              <p class="copy">
+                Send the location, available drawings and preferred start date.
+              </p>
+            </li>
+            <li>
+              <div class="step-top"><span aria-hidden="true">02</span></div>
+              <h3>Define the scope</h3>
+              <p class="copy">
+                Discuss site conditions, included work and items that need
+                clarification.
+              </p>
+            </li>
+            <li>
+              <div class="step-top"><span aria-hidden="true">03</span></div>
+              <h3>Agree checkpoints</h3>
+              <p class="copy">
+                Align the work sequence, inspection points and reporting
+                expectations.
+              </p>
+            </li>
+            <li>
+              <div class="step-top"><span aria-hidden="true">04</span></div>
+              <h3>Plan the handover</h3>
+              <p class="copy">
+                Agree the final review, outstanding items and documents
+                required.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="safety" class="section safety cloud">
+        <div class="wrap split">
+          <div>
+            <p class="tag">Reliability &amp; site safety</p>
+            <h2>Make site requirements clear.</h2>
+            <p class="copy">
+              Confirm delivery routes, work zones, risk assessments and who will
+              record inspections. For occupied buildings, agree how access will
+              be maintained and how noisy or dusty work will be managed.
+            </p>
+          </div>
+          <div>
+            <figure class="section-photo safety-photo">
+              <img
+                src="features-1.webp"
+                alt="Two construction professionals reviewing drawings on site"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="wrap split">
+          <div>
+            <figure class="section-photo">
+              <img
+                src="image/faq.jpg"
+                alt="Contemporary residences with timber façades"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <div>
+            <p class="tag">FAQ</p>
+            <h2>Before you enquire.</h2>
+            <details name="faq">
+              <summary>What should I send for a quotation?</summary>
+              <p>
+                Include the site location, proposed work, target start date and
+                any drawings or specifications you have.
+              </p>
+            </details>
+            <details name="faq">
+              <summary>
+                Can I discuss a project before drawings are ready?
+              </summary>
+              <p>
+                Yes. Share a brief description and the information you have so
+                we can identify what’s needed next.
+              </p>
+            </details>
+            <details name="faq">
+              <summary>Can I enquire about one part of a project?</summary>
+              <p>
+                Yes. Identify the works you want priced and any overlap with
+                other trades or an existing contractor.
+              </p>
+            </details>
+            <details name="faq">
+              <summary>How are specialist methods selected?</summary>
+              <p>
+                We discuss the options against the drawings, required tolerances
+                and site conditions before agreeing a method.
+              </p>
+            </details>
+            <details name="faq">
+              <summary>What should I flag for a renovation?</summary>
+              <p>
+                Note whether the space will be occupied, any restrictions on
+                access or work hours, and what needs to be retained.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section blue">
+        <div class="wrap split">
+          <div>
+            <p class="tag">Contact</p>
+            <h2>Tell us what you’re planning.</h2>
+            <p class="copy">
+              Share the site location, the work you need and when you hope to
+              start.
+            </p>
+            <a class="email" href="mailto:tanvir@cdbcontracting.ae"
+              >tanvir@cdbcontracting.ae</a
+            >
+            <address>
+              Office 1701, Clover Bay Tower<br />Marasi Drive, Business Bay,
+              Dubai, UAE
+            </address>
+            <figure class="section-photo">
+              <img
+                src="contact.webp"
+                alt="Dubai waterfront buildings at night"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <form id="enquiry">
+            <h3>Project enquiry</h3>
+            <p id="form-note">
+              Open a draft in your email app to review and send your enquiry.
+            </p>
+            <div class="form-grid">
+              <label
+                >Full name<input
+                  name="name"
+                  autocomplete="name"
+                  maxlength="100"
+                  required
+              /></label>
+              <label
+                >Subject (optional)<input name="subject" maxlength="140"
+              /></label>
+              <label
+                >Email<input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="254"
+                  required
+              /></label>
+              <label
+                >Phone number (optional)<input
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  maxlength="40"
+              /></label>
+              <label class="message-field"
+                >Message<textarea
+                  name="message"
+                  rows="4"
+                  maxlength="1200"
+                  required
+                ></textarea>
+              </label>
+            </div>
+            <button class="button" type="submit" aria-describedby="form-note">
+              Open email draft
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section
+        id="feedback"
+        class="section feedback"
+        aria-labelledby="feedback-title"
+      >
+        <div class="wrap">
+          <div class="split feedback-heading">
+            <div>
+              <p class="tag">Client feedback</p>
+              <h2 id="feedback-title">How did your <span>project go?</span></h2>
+            </div>
+            <p class="copy">
+              Tell us what worked well and what we could improve. Choose a topic
+              to start an email to CDB Contracting.
+            </p>
+          </div>
+          <div class="feedback-grid">
+            <article class="feedback-card">
+              <span class="feedback-quote" aria-hidden="true">“</span>
+              <h3>Planning and communication</h3>
+              <p class="copy">
+                How clear were the scope, quotation and project updates?
+              </p>
+              <a
+                href="#contact"
+                data-subject="Planning and communication feedback"
+                >Share planning feedback<span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="feedback-card">
+              <span class="feedback-quote" aria-hidden="true">“</span>
+              <h3>Work on site</h3>
+              <p class="copy">
+                Tell us about the quality of the work, site coordination and how
+                issues were handled.
+              </p>
+              <a href="#contact" data-subject="Site work feedback"
+                >Share site feedback<span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="feedback-card">
+              <span class="feedback-quote" aria-hidden="true">“</span>
+              <h3>Handover and follow-up</h3>
+              <p class="copy">
+                Tell us how the final walk-through, documents and outstanding
+                items were handled.
+              </p>
+              <a href="#contact" data-subject="Handover and follow-up feedback"
+                >Share handover feedback<span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section blue site-footer">
+      <div class="footer-wrap">
+        <a class="footer-email" href="mailto:tanvir@cdbcontracting.ae"
+          >tanvir@cdbcontracting.ae <span aria-hidden="true">↗</span></a
+        >
+        <div class="footer-details">
+          <p>
+            CDB Contracting LLC is a Dubai-based building contractor for new
+            construction, renovation and civil works.
+          </p>
+          <div>
+            <h2>Dubai office</h2>
+            <address>
+              Office 1701, Clover Bay Tower,<br />Marasi Drive, Business Bay,
+              Dubai, UAE
+            </address>
+          </div>
+          <a class="footer-top" href="#top" aria-label="Back to top">↑</a>
+        </div>
+        <div class="footer-bottom">
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#services">Services</a><a href="#projects">Projects</a
+            ><a href="#contact">Contact</a>
+          </nav>
+          <p>© CDB Contracting LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
